@@ -11,6 +11,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
+
+        <style type="text/css">
+            .todo-done{
+                text-decoration: line-through;
+            }
+        </style>
 </head>
 
 <body>
@@ -25,7 +31,8 @@
         <ul id="todo-list" class="list-group">
             <li class="list-group-item">
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="checkbox1">
+                    <input class="form-check-input check-todo" type="checkbox" value="" id="checkbox1" 
+                        onclick="checkTodo(this)">
                     <label class="form-check-label" for="checkbox1">
                         Tarefa 1
                     </label>
@@ -33,7 +40,8 @@
             </li>
             <li class="list-group-item">
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="checkbox2">
+                    <input class="form-check-input check-todo" type="checkbox" value="" id="checkbox2"
+                        onclick="checkTodo(this)">
                     <label class="form-check-label" for="checkbox2">
                         Tarefa 2
                     </label>
