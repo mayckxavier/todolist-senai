@@ -27,9 +27,19 @@ function addTodo(todoText){
     todoList.appendChild(listItem); //<ul>.....<li>mais uma tarefa</li></ul>
 }
 
+const inputTodo = getItem("#input-todo");
+
+inputTodo.addEventListener("keydown", (evento) => {
+    if(evento.code == 'Enter'){
+        console.log('Enter pressionado');
+        const inputValue = inputTodo.value;
+        addTodo(inputValue);
+        inputTodo.value = "";
+    }
+});
+
 const btnAddTodo = getItem("#btn-add-todo");
 btnAddTodo.addEventListener("click", (evento) => {
-    const inputTodo = getItem("#input-todo");
     const inputValue = inputTodo.value;
 
     console.log(inputValue);
@@ -37,7 +47,6 @@ btnAddTodo.addEventListener("click", (evento) => {
         console.log("String vazia");
     } else {
         addTodo(inputValue);
-       
         inputTodo.value = "";
     }
 });
